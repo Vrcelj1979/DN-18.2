@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>All messages</title>
+</head>
+<body>
+    Jocker!
+
+    {% for message in messages %}
+    <p>
+        {{ message.vnos }} - {{ message.date }} -
+        <a href="/message/{{ message.key.id() }}">
+            Show mesage
+        </a> |
+        <a href="/edit/{{ message.key.id() }}">
+            Edit message
+        </a> |
+        <a href="/delete/{{ message.key.id() }}">
+            Delete message
+        </a>
+    </p>
+    {% endfor %}
+
+</body>
+</html>
